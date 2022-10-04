@@ -1,6 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/column.dart';
 import 'package:flutter_app/widgets/container.dart';
 // import 'package:flutter_app/widgets/text.dart'; // estilo IOS
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
-      home: MyContainer()
+      home: MyColumn()
     );
   }
 }

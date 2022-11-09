@@ -8,38 +8,49 @@ class MyRow extends StatelessWidget {
       style: TextStyle(color: Colors.black),
       child: Container(
         color: Colors.red.shade300,
-        alignment:  Alignment.centerLeft,
-        child: SizedBox(
-          width: 300,
-          child: Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start ,
-            children: [
-              Container(
-                  width:50,
-                  height: 50,
-                  color: Colors.green,
-                ),
-                Text('lalalalaaskjdfkajshdf asdfadsf afjahsdjf ahsdjhfajksdhf asdfjahsdfkjahsdfk asjdhfkajsdhfkjahs asjhfasjhdf')
-              // Expanded(
-              //   child: Container(
-              //     width: 50,
-              //     height: 50,
-              //     color: Colors.green,
-              //   ),
-              // ),
-              // Container(
-              //   width: 50,
-              //   height: 50,
-              //   color: Colors.blue,
-              // ),
-              // Container(
-              //   width: 50,
-              //   height: 100,
-              //   color: Colors.cyan,
-              // ),
-            ],
-          ),
+        alignment: Alignment.centerLeft,
+        child: Row(
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+// soluciona los errores de overflow haciendo los sizes dinamicos
+            Flexible(
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.green,
+              ),
+            ),
+            Spacer(), //agrega todo el espacio que tenga disponible
+            Flexible(
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.amber,
+              ),
+            ),
+            Flexible(
+                child: Text(
+                    'sajdfkajsld alksdfjlaskd lkajsdflkajsdlkf kasjdflksajdfl aksdfjlak sjdfalskdjfla ksd'))
+            // Expanded(
+            //   child: Container(
+            //     width: 50,
+            //     height: 50,
+            //     color: Colors.green,
+            //   ),
+            // ),
+            // Container(
+            //   width: 50,
+            //   height: 50,
+            //   color: Colors.blue,
+            // ),
+            // Container(
+            //   width: 50,
+            //   height: 100,
+            //   color: Colors.cyan,
+            // ),
+          ],
         ),
       ),
     );

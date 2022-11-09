@@ -37,12 +37,15 @@ class MyColumn extends StatelessWidget {
                 Expanded(
                   // trata de opcupar todo el espacio dispnible, respetando el espacio de los demas widgets, solo se puede usar dentro de Column o Row
                   child: Container(
-                     child: MyRow(),
+                      child: MyRow(),
                       height: 200,
                       color: Colors.blue,
                       margin: EdgeInsets.only(top: 20)),
-                 
                 ),
+                Flexible(
+                    child: FlutterLogo(
+                  size: 200,
+                ))
               ],
             ),
           )),

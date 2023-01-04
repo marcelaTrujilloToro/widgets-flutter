@@ -18,6 +18,9 @@ class MyColumn extends StatelessWidget {
           child: Container(
             color: Colors.green.shade200,
             child: Column(
+              //solo si el container esta envuelto por un Center(),
+              // la altura se calcula en base a los hijos
+              // mainAxisSize: MainAxisSize.min, 
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MyText(),
@@ -28,14 +31,15 @@ class MyColumn extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(), // sirve para crear espacio entre widgets
+                Spacer(), // sirve para crear espacio entre widgets, solo se usa dentro de Colum() o Row()
                 MyContainer(),
                 Container(
                   height: 100,
                   color: Colors.pinkAccent,
                 ),
                 Expanded(
-                  // trata de opcupar todo el espacio dispnible, respetando el espacio de los demas widgets, solo se puede usar dentro de Column o Row
+                  // trata de opcupar todo el espacio dispnible, respetando el espacio de los demas widgets, 
+                  //solo se puede usar dentro de Column o Row
                   child: Container(
                       child: MyRow(),
                       height: 200,

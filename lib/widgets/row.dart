@@ -14,7 +14,7 @@ class MyRow extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-// soluciona los errores de overflow haciendo los sizes dinamicos
+            // soluciona los errores de overflow haciendo los sizes dinamicos
             Flexible(
               child: Container(
                 width: 50,

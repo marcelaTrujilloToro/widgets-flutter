@@ -7,11 +7,13 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     // define la apariencia basica cuando estamos utilizando un Material APP
     return Scaffold(
+
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: "Home",
         ),
+        
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
           label: "Profile",
@@ -47,25 +49,29 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
-      // backgroundColor: Colors.grey,
       appBar: AppBar(
-        //cambiar el el statusBar
+        //cambiar el el statusBar (hora, iconos de señal y bateria)
         systemOverlayStyle:
+        // si pasamos dark usa blanco, si pasamos light usa negro
             SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
-        //utilizar colores hexadecimales va 0xff seguido del color sin el #
+
+        //utilizar colores hexadecimales va 0xff seguido del color sin el, no va entre ""
         backgroundColor: Color(0xff01579b),
-        elevation: 10,
+        elevation: 2,
         shadowColor: Colors.blue,
         title: Text(
           'Flutter App',
           style: TextStyle(
             color: Colors.white,
+            fontSize: 18,
           ),
         ),
       ),
-      resizeToAvoidBottomInset: true,
+      // resizeToAvoidBottomInset: false, // no cambian las dimensiones del body cuando sale el teclado 
       body: Container(
-        color: Colors.grey,
+        color: Colors.blueGrey.shade100,
+        //se expande todo lo que pueda, 
+        // el limite lo pone el scaffold
         width: double.infinity,
         height: double.infinity,
         child: Column(
@@ -77,7 +83,7 @@ class MyScaffold extends StatelessWidget {
                 child: TextField(),
               )),
             ),
-            Text("jajaja"),
+            Text("jajajajajajajaja"),
             SizedBox(height: 50,)
           ],
         ),

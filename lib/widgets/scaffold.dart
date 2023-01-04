@@ -7,13 +7,11 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     // define la apariencia basica cuando estamos utilizando un Material APP
     return Scaffold(
-
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: "Home",
         ),
-        
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
           label: "Profile",
@@ -52,7 +50,7 @@ class MyScaffold extends StatelessWidget {
       appBar: AppBar(
         //cambiar el el statusBar (hora, iconos de señal y bateria)
         systemOverlayStyle:
-        // si pasamos dark usa blanco, si pasamos light usa negro
+            // si pasamos dark usa blanco, si pasamos light usa negro
             SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
 
         //utilizar colores hexadecimales va 0xff seguido del color sin el, no va entre ""
@@ -66,16 +64,26 @@ class MyScaffold extends StatelessWidget {
             fontSize: 18,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.settings),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
-      // resizeToAvoidBottomInset: false, // no cambian las dimensiones del body cuando sale el teclado 
+      // resizeToAvoidBottomInset: false, // no cambian las dimensiones del body cuando sale el teclado
       body: Container(
         color: Colors.blueGrey.shade100,
-        //se expande todo lo que pueda, 
+        //se expande todo lo que pueda,
         // el limite lo pone el scaffold
         width: double.infinity,
         height: double.infinity,
         child: Column(
-          children: const[
+          children: const [
             Expanded(
               child: Center(
                   child: Padding(
@@ -84,7 +92,9 @@ class MyScaffold extends StatelessWidget {
               )),
             ),
             Text("jajajajajajajaja"),
-            SizedBox(height: 50,)
+            SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),

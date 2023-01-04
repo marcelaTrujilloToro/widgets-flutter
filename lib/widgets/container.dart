@@ -14,9 +14,13 @@ class MyContainer extends StatelessWidget {
             width: 200,
             height: 200,
             margin: EdgeInsets.only(left: 20),
+            // padding: EdgeInsets.symmetric(
+            //   horizontal: 30,
+            // ),
             // alignment: Alignment.center,
             decoration: BoxDecoration(
               color: Colors.grey[200],
+
               // borderRadius: BorderRadius.only(
               //   topLeft: Radius.elliptical(50, 20)
               // ),

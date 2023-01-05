@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 // import 'widgets/single_child_scroll_view.dart';
 // import 'widgets/list_view.dart';
 // import 'widgets/custom_font.dart';
-import 'widgets/custom_icons.dart';
+// import 'widgets/custom_icons.dart';
+// import 'widgets/cupertino_scaffold.dart';
+import 'widgets/image.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,17 +22,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // return CupertinoApp(
-    //   home: MyStack()
+    //   // home: MyStack()
+    //   home:CupertinoScaffold()
     // );
 
-    //para el scaffold que solo funciona con material
+    // para el scaffold  solo funciona con material
     return MaterialApp(
       // home: MyScaffold(),
       // home: MySafeArea()
       // home: MySingleChildScrollView()
       // home: MyListView()
       // home: CustomFont()
-      home: CustomIcons()
+      // home: CustomIcons()
+      home: MyImage()
     );
   }
 }

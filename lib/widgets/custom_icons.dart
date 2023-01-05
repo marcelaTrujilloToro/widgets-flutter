@@ -6,14 +6,21 @@ class CustomIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Icon(
-          // Icons.access_alarms_rounded, // iconos de estilo Material
-          // CupertinoIcons.ant_circle_fill, // iconos de estilo IOS
-          MyIcons.CustomIcons.telaran_a, // iconos personalizados, se añade la fuent al pubspec.yaml
-          size: 100,
-          color: Colors.lightBlueAccent,
-          semanticLabel: 'icono reloj', // para personas con baja vision el dispositivo le habla con el nombre
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: const [
+              CupertinoSearchTextField(),
+              Icon(
+                // Icons.access_alarms_rounded, // iconos de estilo Material
+                // CupertinoIcons.ant_circle_fill, // iconos de estilo IOS
+                MyIcons.CustomIcons.telaran_a, // iconos personalizados, se añade la fuent al pubspec.yaml
+                size: 100,
+                color: Colors.lightBlueAccent,
+                semanticLabel: 'icono reloj', // para personas con baja vision el dispositivo le habla con el nombre
+              ),
+            ],
+          ),
         ),
       ),
     );

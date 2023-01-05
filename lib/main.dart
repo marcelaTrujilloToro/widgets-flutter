@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 // import 'widgets/custom_font.dart';
 // import 'widgets/custom_icons.dart';
 // import 'widgets/cupertino_scaffold.dart';
+import 'facebook_ui/facebook_ui.dart';
 import 'widgets/image.dart';
 
 void main() {
@@ -28,13 +29,14 @@ class MyApp extends StatelessWidget {
 
     // para el scaffold  solo funciona con material
     return MaterialApp(
+      home: FacebookUI()
       // home: MyScaffold(),
       // home: MySafeArea()
       // home: MySingleChildScrollView()
       // home: MyListView()
       // home: CustomFont()
       // home: CustomIcons()
-      home: MyImage()
+      // home: MyImage()
     );
   }
 }

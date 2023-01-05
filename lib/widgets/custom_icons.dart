@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../icons/custom_icons.dart' as MyIcons;
+import '../icons/custom_icons_icons.dart' as MyIcons;
 
 class CustomIcons extends StatelessWidget {
   @override
